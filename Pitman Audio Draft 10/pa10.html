@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+
+
+
+<head>
+
+<link rel="stylesheet" href="Site.css"/>
+
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+<meta charset="utf-8">
+<meta name="description" content="With a sound hailing back to the classic tweed amps 
+	of old, this versitele amp also delivers an extended bass range for steel and bass 
+	players. Shaped by the 6SL7 and 6SN7 Octal tube based preamp, and delivered to you by 
+	a massive 70 watt power amp.">
+<title>"Pitman Audio | A tube/solid-state hybrid audio amplifier for acoustic string
+instruments, crafted in Vermont by people who love music!</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://jarallax.com/download/jarallax-min-0.2.js"></script>
+
+</head>
+
+<script type="text/javascript">
+	
+function init()
+	{
+		var w = window.outerWidth;
+		var nh = (w/17);
+		
+		document.getElementById('navbar').style.height=(nh + 'px');
+		var navh = document.getElementById('navbar').style.height;
+		
+		document.getElementById('s1').style.top=(nh + 15 + 'px');
+	}
+	
+		window.onload=init;
+		window.onresize=init;
+		
+		
+	function scrll()
+	{
+	window.scrollTo(0,10000);
+	
+	}
+	
+ var posturi = 'api/paudio/PostData';
+
+        // Data submission method to request a display update.
+
+        function requestDetail(cmd) {
+            $.ajax({
+                type: 'POST',
+                url: posturi,
+                data: { '': cmd },
+                success: updateData,
+                error: updateError
+            });
+        }
+
+        function saveform_Click(event) {
+            var adrs = $("#address")[0].value;
+            if (adrs) {
+                var p = '{"action":"SetAddress", "address":"' + adrs + '"}';
+                requestDetail(p);
+            }
+            event.preventDefault = true;
+        }
+
+        function updateData(data, textStatus, jqXHR) {
+            var updt = $.parseJSON(data);
+            var act = updt.action;
+
+            if (act == 'SetAddress') {
+                alert( updt.data + " address was stored successfully.");
+            }
+        }
+
+        function updateError(jqXHR, textStatus, errorThrown) {
+            alert(textStatus);
+        }
+
+        // 
+        $(document).ready(function() {
+    $("html, body").animate({scrollTop: $("#email").offset().top}, 1000); 
+});
+</script>
+
+
+<body>
+
+<div id="content">
+	<div id="navbar">
+		<img id="logo" src="Final/Elements/Website_Mockup_Final_Elements-26.png" onclick="scrll()">
+		<img id="products" src="Final/Elements/Website_Mockup_Final_Elements-28.png" onclick="scrll()" />
+		<img id="store" src="Final/Elements/Website_Mockup_Final_Elements-29.png" onclick="scrll()" />
+		<img id="contact" src="Final/Elements/Website_Mockup_Final_Elements-30.png" onclick="scrll()" />
+	</div>
+	<section id="s1">
+		<img id="img25" src="Final/Elements/Website_Mockup_Final_Elements-25.png" />
+		<img id="img24" src="Final/Elements/Website_Mockup_Final_Elements-24.png" />
+		<img id="img23" src="Final/Elements/Website_Mockup_Final_Elements-23.png" />
+		<img class="img6" src="Final/Elements/Website_Mockup_Final_Elements-06.png" />
+	</section>
+	
+	<section id="s2">
+		<img id="img20" src="Final/Elements/Website_Mockup_Final_Elements-20.png" />
+		<div id="s2text">Vintage tone meets modern engineering in this no compromises combo amp designed for the serious gigging musician. Our engineer Jim Pitman has been playing electric and steel guitar for over 40 years and designed this amp as a modern solution to vintage tone. With a sound hailing back to the classic tweed amps of old, this versatile amp also delivers an extended bass range for the and bass players.The tone is shaped by the 6SL7 and 6SN7 Octal tube based preamp. Utilizing a high quality solid state power stage we call the  “Tube Buffer” Lets this amp fill a venue while only weighing in at 32lbs. Available in tweed as well as cherry, walnut, maple, and your choice of speaker, these amps are each expertly hand crafter locally in Vermont.
+</div>
+	</section>
+
+	<section id="s3">
+		<img id="img19" src="Final/Elements/Website_Mockup_Final_Elements-19.png" />
+		<img class="img6" src="Final/Elements/Website_Mockup_Final_Elements-06.png" />
+		<img id="img18" src="Final/Elements/Website_Mockup_Final_Elements-18.png" />
+		<div id="s3text">The faceplate resides in a discreet compartment in the top of the amp to keep the knobs and switches safe during travel. Opening the lid reveals the beautifully lit interior with an angled faceplate that is perfectly visible no matter if you are sitting or standing. On the faceplate you will see a traditional passive tone section followed by an all tube effects loop that can be set to either serial or parallel.
+</div>
+	</section>
+
+	<section id="s4">
+		<img id="img16" src="Final/Elements/Website_Mockup_Final_Elements-16.png" />
+	</section>
+	
+	<section id="s5">
+		<img id="img15" src="Final/Elements/Website_Mockup_Final_Elements-15.png" />
+		<img class="img6" src="Final/Elements/Website_Mockup_Final_Elements-06.png" />
+		<div id="s5text">Based in Waterbury Center Vermont, Pitman Audio hand makes every Octal 70. 
+We source as much material as possible locally, even down to the oils we finish our bare wooden cabinets with. The dovetail jointed, hand made, cabinets come in tweed and beautiful oil stained wood options.
+</div>
+		<img id="built" src="Final/Elements/built.png">
+		
+	</section>
+	
+	<section id="s6">
+		<div id="s6text">The Eminence Legend 1258 comes standard, chosen for its vintage tone and high end clarity. We know how personal speaker choice can be so any standard sized 12” speaker can be equipped.
+		</div>
+		<img id="img7" src="Final/Elements/Website_Mockup_Final_Elements-07.png" />
+	</section>
+
+
+
+	<section id="s7">
+		
+		<img id="hoodimg" src="Final/Elements/hoodimg.png" />
+		<div id="s7text">Nothing can replace the classic tone of a real tube preamp, so we didn’t. Designed from the ground up using nothing but the highest quality components, the 6SL7 and 6SN7 octal tube based preamp with all tube effects loop delivers truly boutique sound with clarity and warmth. From the carbon film resistors, and the polypropylene capacitors in the tube section to the metal film resistors in the solid state section, all component types are carefully chosen for the role they play in the circuit ensuring both long term reliability and the best fidelity.
+</div>
+	</section>
+
+
+	<section id="s8">
+	
+	<section style="position:relative;float:top;">
+		<img id="img5" src="Final/Elements/Website_Mockup_Final_Elements-05.png" />	
+		<img style="position:relative; float:bottom; width:50%; left:25%;" src="Final/Elements/Website_Mockup_Final_Elements-06.png" />
+	</section>
+	
+	<img src="Final/Elements/Website_Mockup_Final_Elements-04.png" id="img4"/>
+	<div id="s8text">The tube section is followed by our solid state “Tube Buffer”. Taking the place of the output transformer, it simply replicates the tube signal. reinforcing the current to match the speaker impedance. This novel approach delivers a true 70 watts of power but weighs in at a fraction of a similar tube based power amp. With less than 0.04% measured distortion, you add no unwanted solid state coloration to the tube tone. In addition, the solid state design exhibits none of the low frequency rolloff a traditional output transformer does, further reducing bass frequency distortion.
+</div>
+	</section>
+	
+	<section id="s9">
+		<img style="position:relative; float:bottom; width:50%; left:25%;" src="Final/Elements/Website_Mockup_Final_Elements-06.png" />
+
+			<div id="email">
+				<h3 style="font-family:Helvetica;color:white; position:absolute; width:75%; left:12.5%;"></br>Coming Soon. </br>Join our 
+				mailing list for updates and release info.</h3>
+					<form method="post" action="add.php" style="position:absolute; top:70%; width:50%; left:25%;">
+						 <input type="text" id="address" name="address" placeholder="email@host.com" /><br />
+           				 <!-- <input type="image" src="/Images/submit.png" id="saveform" onclick="saveform_Click(event);" /> -->
+            			<input type="button" value="Submit" id="saveform" onclick="saveform_Click(event);" />
+					</form>
+			</div>
+			
+			<img id="logof" src="Final/Elements/Website_Mockup_Final_Elements-02.png" />
+			
+	</section>
+
+
+</body>
+
+</html>
